@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link , graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
-
+import Head from '../components/head'
 
 const AboutPage = () => {
     const data = useStaticQuery(graphql`
@@ -15,6 +15,7 @@ const AboutPage = () => {
     `)
     return (
         <Layout>
+            <Head title="About"/>
             <div>
                 <h1>About me</h1>
                 <p>I'm {data.site.siteMetadata.description}. Software Engineer and Full Stack Web Developer.</p>
